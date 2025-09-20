@@ -33,7 +33,7 @@ int main()
         printf("\t%d\n", i);
         sleep(1);
     }
-    while (round <= 3)
+    while (round <= 10)
     {
         printf("Round %d :\n", round);
         printf("enter your choice either rock paper or scissor\n");
@@ -45,10 +45,11 @@ int main()
         sleep(1);
         if (strcasecmp(choice, final) == 0)
         {
-            printf("the match is draw ⛔\n");
+            printf("the match is draw\n");
         }
         else if ((strcasecmp(choice, "Rock") == 0) && (strcasecmp(final, "Scissor") == 0) ||
-                 (strcasecmp(choice, "paper") == 0) && (strcasecmp(choice, "Rock") == 0) || (strcasecmp(choice, "Rock") == 0) && (strcasecmp(choice, "scissor") == 0) && (strcasecmp(choice, "paper") == 0))
+                 (strcasecmp(choice, "paper") == 0) && (strcasecmp(final, "Rock") == 0) ||
+                 (strcasecmp(choice, "scissor") == 0) && (strcasecmp(final, "paper") == 0))
         {
             printf("%s wins this round\n", name);
             points++;
@@ -66,11 +67,11 @@ int main()
     printf("\t\t\tbot:\t %d\n", botpoint);
     if (points > botpoint)
     {
-        printf("congrajulation %s you have won\n", name);
+        printf("congraulation %s you have won\n", name);
     }
     else if (botpoint > points)
     {
-        printf("bot wins the game u are weak dude");
+        printf("bot wins the game u are weak dude\n");
     }
     else
     {
